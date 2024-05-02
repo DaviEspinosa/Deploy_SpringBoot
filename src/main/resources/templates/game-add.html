@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista</title>
+    <link rel="stylesheet" th:href="@{style.css}">
+
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a th:href="@{/}">Home</a></li>
+                <li><a th:href="@{/list}">List Games</a></li>
+                <li><a th:href="@{/addgame}">Add Game</a></li>
+                <li><a th:href="@{/contact}">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <form action="adicionar" method="post">
+            <h1>Add Game</h1>
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="nome" name="nome">
+            <label for="name">Descrição</label>
+            <input type="text" class="form-control" id="descrição" name="descricao">
+            <label for="name">Desenvolvedor</label>
+            <input type="text" class="form-control" id="desenvolvedor" name="desenvolvedor">
+            <label for="name">Preço</label>
+            <input type="text" class="form-control" id="preco" name="preco">
+
+            <button type="submit">Enviar</button>
+        
+        </form>
+    </div>
+</body>
+</html>

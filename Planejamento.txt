@@ -1,0 +1,15 @@
+Model
+    GameModel
+Controller
+    IndexController
+        - rotas de navegação
+    GameController
+        - listar games
+        -cadastrar novo games
+Repository
+    GameRepository
+        -para opera o CRUD
+
+templates
+    - games-cadastro.html
+    - games-lista.html

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista</title>
+    <link rel="stylesheet" th:href="@{style.css}">]
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a th:href="@{/}">Home</a></li>
+                <li><a th:href="@{/list}">List Games</a></li>
+                <li><a th:href="@{/addgame}">Add Game</a></li>
+                <li><a th:href="@{/contact}">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<tbody>
+    <tr>
+        <th>Nome</th>
+        <th>Descrição</th>
+        <th>Desenvolvedor</th>
+        <th>Preço</th>
+    </tr>
+    <tr th:each="game: ${games}">
+        <td th:text="${game.nome}"></td>
+        <td th:text="${game.descricao}"></td>
+        <td th:text="${game.desenvolvedor}"></td>
+        <td th:text="${game.preco}"></td>
+    </tr>
+</tbody>
+</body>
+</html>
